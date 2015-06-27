@@ -217,7 +217,8 @@ https://remixing.doorkeeper.jp/events/26208
   * イメージを継承してOS〜ミドルウェア〜Applicationをインストールできる
 
 ## Dockerを巡る最近の動き
-  * Open Container Projectというのが6/23に発表された
+  * Open Container Projectというのが6/23に発表された  
+     Docker、Amazon Web Services、Google、Microsoft、Red Hatなどで発足され、コンテナの仕様が統一されていくとのこと
   * Dockerがソースを提供し、MSが参加したので  
   DockerでWindowsも動くようになった  
     https://github.com/opencontainers/runc
