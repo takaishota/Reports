@@ -105,11 +105,11 @@ https://remixing.doorkeeper.jp/events/26208
   Chromeの最新機能が追加されている開発者用のベータ版。バグが含まれているものもある。
   * 毎日アップデート
   * 並行インストール
-  * たまに壊れる
+  * たまに壊れる  
   https://www.google.co.jp/chrome/browser/canary.html
 
 ### Chromium
-  ChromeのベースとなっているオープンソースブラウザでChromiumのスナップショットはChromeの最新ビルドとほぼ同じ
+  ChromeのベースとなっているオープンソースブラウザでChromiumのスナップショットはChromeの最新ビルドとほぼ同じ  
   https://github.com/chromium/chromium
 
 ### 実験的機能の有効化
