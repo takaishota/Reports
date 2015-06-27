@@ -193,15 +193,15 @@ https://remixing.doorkeeper.jp/events/26208
   同一性、可搬性があり、軽量
 
 1. インフラは状態管理がしづらい
-    手作業で環境構築
-    何を入れたか
-    開発環境と本番環境で差異が出てしまう
+  手作業で環境構築
+  何を入れたか
+  開発環境と本番環境で差異が出てしまう
 2. コンテナとは
-    * VMでは仮想化環境の上でOSを丸ごと動かす
-    * Dockerでは、HostOSを共有し、プロセスとして各環境をコンテナ上で動かす
+  * VMでは仮想化環境の上でOSを丸ごと動かす
+  * Dockerでは、HostOSを共有し、プロセスとして各環境をコンテナ上で動かす
 
 3. DockerFile
-    環境構築のためのコマンドなどを記載する
+  環境構築のためのコマンドなどを記載する
 
 ## 導入するメリット
   * コンテナのイメージを配布することで完全に同一
@@ -210,19 +210,19 @@ https://remixing.doorkeeper.jp/events/26208
       インフラを破棄、置き換えできるものと捉える
 
 ## Docker EcoSystem
-    [Docker Habu resistory](https://registry.hub.docker.com/)
-    * インフラディベロッパーがインフラを共有するためのサービス
-    * jenkinsなどの公式イメージもある
-    * イメージを継承してOS〜ミドルウェア〜Applicationをインストールできる
+  [Docker Habu resistory](https://registry.hub.docker.com/)
+  * インフラディベロッパーがインフラを共有するためのサービス
+  * jenkinsなどの公式イメージもある
+  * イメージを継承してOS〜ミドルウェア〜Applicationをインストールできる
 
 ## Dockerを巡る最近の動き
-    * Open Container Projectというのが6/23に発表された
-    * Dockerがソースを提供し、MSが参加したので
-    DockerでWindowsも動くようになった
-      https://github.com/opencontainers/runc
+  * Open Container Projectというのが6/23に発表された
+  * Dockerがソースを提供し、MSが参加したので
+  DockerでWindowsも動くようになった
+    https://github.com/opencontainers/runc
 
 ## 開発中のサービスhairの環境
-    AWS、Bitbucket、Jenkins、Docker
+  AWS、Bitbucket、Jenkins、Docker
 
 # ネットメディアを支える開発環境の変遷
 
