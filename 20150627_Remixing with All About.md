@@ -83,7 +83,8 @@ https://remixing.doorkeeper.jp/events/26208
     バグは必ずあるので検知するツールを早めに取り入れる
   * Crashlytics  
     導入が簡単だった
-  * TestFlight
+  * TestFlight  
+    修正・リリースの期間短縮
 
 3.  マルチプラットフォーム化
 　複数言語同時並行は難しい
