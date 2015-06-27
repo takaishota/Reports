@@ -258,14 +258,14 @@ https://remixing.doorkeeper.jp/events/26208
 
   * git + Bitbucket
   * Git hub flow
-  * Pull Request & Review Board
+  * Pull Request & Review Board  
     Pull Requestだと毎回メールが飛んでしまうので
 
 4. 切り替えたメリット
   * リリースミスがなくなった
   * レビュー時に動作確認しやすくなった
   * モダンなホスティングサービスが使える
-  * branchを使った並行開発
+  * branchを使った並行開発ができる
 
 5. フロントエンドのテスト
   * jenkinsがURLを元にテスト実行
