@@ -46,13 +46,13 @@ https://remixing.doorkeeper.jp/events/26208
 
   5. ReadMeを用意する
     * Name、OverView、Description、Demoなどが一般的
-    * バージョンや開発状況を示すバッチを置くのがOSSではよくある
-    バッジを作成してくれるサービスがある
+    * バージョンや開発状況を示すバッチを置くのがOSSではよくある  
+    バッジを作成してくれるサービスがある  
         http://shields.io/
 
   6. 公開する
 
-                npm publish
+        npm publish
 
 
 # オールアバウトのアプリ開発
@@ -79,11 +79,12 @@ https://remixing.doorkeeper.jp/events/26208
     * エンジニアだけでなく全員で考える
 
 2.  リリース後の不具合
-  * 考慮不足による不具合が頻発した
+  * 考慮不足による不具合が頻発した  
     バグは必ずあるので検知するツールを早めに取り入れる
-  * Crashlytics
+  * Crashlytics  
     導入が簡単だった
-  * TestFlight
+  * TestFlight  
+    修正・リリースの期間短縮
 
 3.  マルチプラットフォーム化
 　複数言語同時並行は難しい
@@ -105,11 +106,11 @@ https://remixing.doorkeeper.jp/events/26208
   Chromeの最新機能が追加されている開発者用のベータ版。バグが含まれているものもある。
   * 毎日アップデート
   * 並行インストール
-  * たまに壊れる
+  * たまに壊れる  
   https://www.google.co.jp/chrome/browser/canary.html
 
 ### Chromium
-  ChromeのベースとなっているオープンソースブラウザでChromiumのスナップショットはChromeの最新ビルドとほぼ同じ
+  ChromeのベースとなっているオープンソースブラウザでChromiumのスナップショットはChromeの最新ビルドとほぼ同じ  
   https://github.com/chromium/chromium
 
 ### 実験的機能の有効化
@@ -148,25 +149,25 @@ https://remixing.doorkeeper.jp/events/26208
    エンタメ系のコンテンツを充実したいから、メディアA,B,C,Dからをエンタメ系記事の新着だけとってきて表示したい！
 ## 開発者が考えたこと
   1. 各メディアのDBに直接つないで取ってくるプログラムをとってこよう
-    * 1つのDBが落ちてるとシステムがダウンする
+    * 1つのDBが落ちてるとシステムがダウンする  
       耐障害性が低い
-    * メディア分だけDB接続が必要
+    * メディア分だけDB接続が必要  
     実装が複雑化
     * 拡張性
     DBごとの使用知ってないとだめとか
   2. バッチでデータ作成して、1つのソースから取得
-    * 耐障害性は上がる
+    * 耐障害性は上がる  
     データを前もって準備できる
     * メディア数分のバッチ実装が必要
   3. APIを実装してAPI経由でデータ取得
     * 取得元プログラムがデータの持ち方を知らずに使用できる
-    * 影響範囲の特定が容易
+    * 影響範囲の特定が容易  
       APIのみ改修でOK
     * 拡張性も上がる
 
 ## APIを使用した実例
   * 記事内容を解析して特徴的な内容でタグ付けする
-  * タグ一覧ページがある
+  * タグ一覧ページがある  
       記事タイトル、記事内容、記事概要が表示されるが
       各DBに値を持っている
   * 記事情報を返却するAPIを実装
@@ -178,7 +179,7 @@ https://remixing.doorkeeper.jp/events/26208
       * ステータスコードの有効活用
           * ステータスコードを分かりやすく定義し直す
           * それを属人化しないようにドキュメント化
-  * ライブラリ化
+  * ライブラリ化  
       APIを叩く実装部分の実装を共通化
 
 ## まとめ
@@ -189,40 +190,41 @@ https://remixing.doorkeeper.jp/events/26208
 　hairというサービスを開発中です
 
 ## Dockerとは
-  * インフラをソースコードで管理
+  * インフラをソースコードで管理  
   同一性、可搬性があり、軽量
 
-1. インフラは状態管理がしづらい
-    手作業で環境構築
-    何を入れたか
-    開発環境と本番環境で差異が出てしまう
+1. インフラは状態管理がしづらい  
+  手作業で環境構築  
+  何を入れたか  
+  開発環境と本番環境で差異が出てしまう
 2. コンテナとは
-    * VMでは仮想化環境の上でOSを丸ごと動かす
-    * Dockerでは、HostOSを共有し、プロセスとして各環境をコンテナ上で動かす
+  * VMでは仮想化環境の上でOSを丸ごと動かす
+  * Dockerでは、HostOSを共有し、プロセスとして各環境をコンテナ上で動かす
 
 3. DockerFile
-    環境構築のためのコマンドなどを記載する
+  環境構築のためのコマンドなどを記載する
 
 ## 導入するメリット
   * コンテナのイメージを配布することで完全に同一
   * 特定のベンダーにとらわれない
-    * Immutable Infrastructure
+    * Immutable Infrastructure  
       インフラを破棄、置き換えできるものと捉える
 
 ## Docker EcoSystem
-    [Docker Habu resistory](https://registry.hub.docker.com/)
-    * インフラディベロッパーがインフラを共有するためのサービス
-    * jenkinsなどの公式イメージもある
-    * イメージを継承してOS〜ミドルウェア〜Applicationをインストールできる
+  [Docker Habu resistory](https://registry.hub.docker.com/)
+  * インフラディベロッパーがインフラを共有するためのサービス
+  * jenkinsなどの公式イメージもある
+  * イメージを継承してOS〜ミドルウェア〜Applicationをインストールできる
 
 ## Dockerを巡る最近の動き
-    * Open Container Projectというのが6/23に発表された
-    * Dockerがソースを提供し、MSが参加したので
-    DockerでWindowsも動くようになった
-      https://github.com/opencontainers/runc
+  * Open Container Projectというのが6/23に発表された  
+     Docker、Amazon Web Services、Google、Microsoft、Red Hatなどで発足され、コンテナの仕様が統一されていくとのこと
+  * Dockerがソースを提供し、MSが参加したので  
+  DockerでWindowsも動くようになった  
+    https://github.com/opencontainers/runc
 
 ## 開発中のサービスhairの環境
-    AWS、Bitbucket、Jenkins、Docker
+  AWS、Bitbucket、Jenkins、Docker
 
 # ネットメディアを支える開発環境の変遷
 
@@ -258,14 +260,14 @@ https://remixing.doorkeeper.jp/events/26208
 
   * git + Bitbucket
   * Git hub flow
-  * Pull Request & Review Board
+  * Pull Request & Review Board  
     Pull Requestだと毎回メールが飛んでしまうので
 
 4. 切り替えたメリット
   * リリースミスがなくなった
   * レビュー時に動作確認しやすくなった
   * モダンなホスティングサービスが使える
-  * branchを使った並行開発
+  * branchを使った並行開発ができる
 
 5. フロントエンドのテスト
   * jenkinsがURLを元にテスト実行
@@ -301,7 +303,7 @@ https://remixing.doorkeeper.jp/events/26208
   * プロデューサーとエンジニアを協働させる
     * お互いにどういう考えで動いているかが見えづらく、不満や迷いが生まれていた
     * まず技術は置いといて、ユーザにとってどうかを考えてから、技術的なissueに移るように
-  * チーム体制の見直し：事業別から機能別に
+  * チーム体制の見直し：事業別から機能別に  
     エンジニア・プロデューサーを機能別にし、開発環境などを共有
 
 # リリースフローの変化にみるオールアバウトのDevOps化の流れ
