@@ -114,7 +114,8 @@ AIの判定をチューリングテストで行うが、テストを行う人間
   検索窓に「鎌倉 ランチ」とか打つが、これも機械に合わせたインタラクションで自然ではない、人にいくときはそんな風には聞かない
   * siriについて
     * Siri and conversational repair (https://uxmag.com/articles/what-i-meant-was)
-    * Blink UX社によるsiriとのUXの分析（http://www.blinkux.com/_downloads/Blink_Siri_White_Paper.pdf) (2012)
+    * Blink UX社によるsiriとのUXの分析（http://www.blinkux.com/_downloads/Blink_Siri_White_Paper.pdf) (2012)  
+
   ![siri_response](img/siri_response.png)
 
     1. 最初はウキウキ
