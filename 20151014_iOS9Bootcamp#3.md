@@ -20,6 +20,7 @@ http://eventdots.jp/event/571250
 ### AddressBookとContactsについて
 #### フレームワーク
 * どちらにもUIとsuffixがついてるフレームワークがある
+
 #### ContactsUI
 * ビューコントローラーを生成し、presentViewするだけで使用できる
 * これだけで一覧、詳細表示が使える
@@ -79,6 +80,7 @@ http://eventdots.jp/event/571250
       * 必要なプロパティを設定する
       * CNSaveRequestへデータベースへの操作を指定する
       * CNContactStoreに対してセーブを実施する
+
 #### Contacts Changed Notifications
   * CNContactStoreDidChangeNotification
   * 連絡先データの変更があるとNotificationを受け取れる
@@ -93,6 +95,7 @@ http://eventdots.jp/event/571250
 ### RettyアプリをwatchOS2アプリに対応させた話
 * Objective-Cで書かれたOS1向けのアプリをSwiftで書き直した
 * WatchOS2 Appはbitcode対応しないといけない
+
 #### bitcodeってなに
 * LLVM IRを実行形式に埋め込むためのフォーマット
 * Appleが突然CPUアーキテクチャを変更したデバイスを売り始めても
@@ -102,6 +105,7 @@ http://eventdots.jp/event/571250
 
 #### WatchOS1、2の違い
 * ネイティブ動作ができるようになった
+
 #### 新機能
 * 公式Appでしか使えなかった機能が使えるようになった
 * Watch App Extensionがネイティブで動くことでiPhoneがなくても大抵のことができるようになった
@@ -136,6 +140,7 @@ http://eventdots.jp/event/571250
 #### 今回注目した機能
 * 豊富なセンサー類
 * iPhoneを出すほどでもないちょっとした操作
+
 ##### 作ってみた
   * AppleWatchで取得した心拍数をラズペリーパイに送ってそれに合わせてLEDを点滅させる
   * 家電の操作  
