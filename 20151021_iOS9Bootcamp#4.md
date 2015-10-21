@@ -22,7 +22,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
   * Siriで検索も可能
 * アプリがストアからダウンロードできる
 
-### tvos
+### tvosについて
 * iOS9がベース
 * TVML
   * アップr独自のマークアップ言語
@@ -47,13 +47,13 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
   * UIFocusGuide クラスがある
 #### TVMLCatalog
 * TVMLのコンテンツを表示する
-* ターミナルでclientディレクトリに移動してWebサーバーを立ち上げるコマンドを実行する
+* ターミナルでclientディレクトリに移動してWebサーバーを立ち上げるコマンドを実行する  
   python -m simpleHTTP server ポート
 * Appdelegateしかない
   -> サーバの指定と最初に起動するJSファイルを指定
   -> あとはJSで処理するようになっている
 * TVMLの表示、ユーザインタラクションはjsで実行される
-### Handson
+
 ### Forcus
   * リモコンや外部入力装置からの
   * 一つのviewにしか
@@ -87,6 +87,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 * 奥行きを表現する画像
 * アプリアイコンには必須
 * 他のUIにはOptional
+
 #### Parallax Viewer
 * アップルから提供されているlsrの表示、作成アプリ
 * 画像を奥から貼り付けると画像が立体的に表示される
@@ -124,6 +125,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
   * CSSearchableItemをインスタンス化して使う
   * インデックス追加はメソッドを呼ぶだけ
   * アプリ側で拾うメソッドはNSUserActivityと同じ
+
 #### Web Markup
   * 自分がアプリ持っていなくても出せるというのが重要なのでWebとの連携が重要
   * deeplinkに対応させるだけでAppleのクローラーが探してくれて勝手に使える
@@ -131,12 +133,13 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
     * ドキュメントでも何度も強調されている
   * AppleBotはどうやって探すか
     * salesURL、marketingを見てさがすので入れといたほうが良い
+
 #### Deeplink
   * UniversalLinksとこれまでのCustom URL Schem2つあるが、UniversalLinksを推奨している
     * unique
     * Secure
 
-#### 検索ランキングに反映される要素
+### 検索ランキングに反映される要素
   * 関連性を重視してる（URL Popularity）
     NSUserActivity、CoreSpotlight、Web のuniqueIdを同じにすると相乗効果がある
   * Engagement
@@ -149,7 +152,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 
 ### コード
 * https://github.com/shinobicontrols/iOS9-day-by-day  
-の 01-Search-APIsを元にしている
+の 01-Search-APIsを元にしている  
 * CSAttributesetのプロパティでsupportPhoneCallプロパティで電話をかけるActionを表示したりできる
 * ViewControllerのUIResponderのプロパティにactivityというのがあって、そこにセットすると表示されやすくなるよう
 
