@@ -45,11 +45,12 @@ http://eventdots.jp/event/571250
 ### Privacyについて
 #### アラート
 * 連絡先にアクセスする際には許可を求めるアラートが表示される
-* 連絡先アクセス許可状態を取得
-    NotDetermined、Restriced、
+* 連絡先アクセス許可状態を取得（未選択、機能制限によりアクセス禁止、ユーザによりアクセス禁止、ユーザによりアクセス許可）
+    CNAuthorizationStatus:NotDetermined、Restriced、Denied、Authorized
+    ABAuthorizationStatus:kABAuthorizationStatusNotDetermined、kABAuthorizationStatusRestriced、kABAuthorizationStatusDenied、kABAuthorizationStatusAuthorized
 * 許可をユーザに問い合わせるメソッドのブロック関数にステータスが入った変数が渡されてくる
 * 一度、アラートが表示されるとその後なかなか表示されない
-* 設定 > プライバシー > 連絡先 で変更可能
+  * 設定 > プライバシー > 連絡先 で変更可能
 
 #### ユーザの取得
 * idからの検索
@@ -59,10 +60,10 @@ http://eventdots.jp/event/571250
   * Contaacts
       CNContact.identifierを指定して取得
         String型
-          -> RecordIDとCNContact.identifierには互換性がない
+          -> RecordIDとCNContact.identifierには互換性がない（型が違う）ので注意（DBに入れてたりするとマイグレーションが必要になる）
 * 名前からの検索
   * 姓、名、読みから検索できる
-  * Contacts
+  * AddressBook、Contactsであまり変わらない
       * keysToFetchで指定されていないプロパティへはアクセスできない
       * アクセスする前にキーが指定されているかをチェックする必要がある
 
@@ -101,36 +102,39 @@ http://eventdots.jp/event/571250
 * Appleが突然CPUアーキテクチャを変更したデバイスを売り始めても
 開発者がそれに対応してビルドする必要がない
 * 含まれているFrameWork全てにbitcodeが含まれていないといけない
+* 既存のライブラリのほとんどがWatchOS2で使えなかった
 * watch向けアプリが動かないとリジェクトされる
 
 #### WatchOS1、2の違い
-* ネイティブ動作ができるようになった
+* Watch ExtensionがiOS側からWatchOS側で動作するようになった
 
 #### 新機能
 * 公式Appでしか使えなかった機能が使えるようになった
-* Watch App Extensionがネイティブで動くことでiPhoneがなくても大抵のことができるようになった
+* Watch App Extensionがネイティブで動くことでiPhoneがなくても大抵のことができるようになった。  
+今回は  
   * WatchConnectivity
   * Security
   * CoreLocation
   をつかった
-* BackGround
-  * OSがいい感じのタイミングで転送
-  * 転送前にキューに入ってくれる
-  * 3種類の転送方法
-    * Application Context
-      最新のオブジェクトのみ送りたい
-      [String:AnyObject]型
-    * UserInfo
-      全てのデータを送りたい
-      [String:AnyObject]型
-    * File
-      NSURLとString:AnyObject飲めたデータ
-    * Interractive
-      すぐに転送が始まる
-      NSDataや[String:AnyObject]型
-      * Reachableであることが条件
-        * Wathc Appがアクティブであること
-        * 少なくともバックグラウンドでiOSアプリが起動していること
+* WatchConnectivityについて
+  * Background Transfer
+    * OSがいい感じのタイミングで転送
+    * 転送前にキューに入ってくれる
+    * 3種類の転送方法がある
+      * Application Context
+        最新のオブジェクトのみ送りたい
+        [String:AnyObject]型(Dictionary)  
+      * User info transfer
+        全てのデータを送りたい
+        [String:AnyObject]型
+      * File transfer
+        NSURLとString:AnyObject型のメタデータ
+  * Interactive messaging  
+    * すぐに転送が始まる  
+    * NSDataや[String:AnyObject]型
+    * Reachableであることが条件
+      * Wathc Appがアクティブであること
+      * 少なくともバックグラウンドでiOSアプリが起動していること
 
 #### どんなアプリが良いか
 * 小さい画面で画像を見てもあまり嬉しくない
@@ -142,12 +146,15 @@ http://eventdots.jp/event/571250
 * iPhoneを出すほどでもないちょっとした操作
 
 ##### 作ってみた
-  * AppleWatchで取得した心拍数をラズペリーパイに送ってそれに合わせてLEDを点滅させる
+  * AppleWatchで取得した心拍数をラズペリーパイに送ってそれに合わせてLEDを点滅させる  
+    -> 結構おもしろかった
   * 家電の操作  
     -> 完成できなかった
-    * 赤外線センサを買ってきたが、光が弱すぎて反応しなかった
+    * 赤外線センサを買ってきたが、光が弱すぎて反応しなかった、など、、、  
 
-## モバイルバックエンド勉強会
+## モバイルバックエンド勉強会の宣伝
+以下の内容でモバイルアプリのバックエンド開発についての勉強会があります。(2015年10月30日（金）)
+
 * DynamoDB
 * Elixir
 * Amazon API Gateway/AWS Lambda、またそれらを利用したサーバーレスフレームワークであるJAWSなど
