@@ -101,6 +101,8 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 
 ## Search APIsとUniversal linksの活用方法
 
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/mTpmtvkl2y3cgu" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/kitasuke/search-apis-universal-links" title="Search APIs &amp; Universal Links" target="_blank">Search APIs &amp; Universal Links</a> </strong> from <strong><a href="//www.slideshare.net/kitasuke" target="_blank">Yusuke Kita</a></strong> </div>
+
 ### Myworks
 * Cardio - Simple Health Kit
 
@@ -161,5 +163,3 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
   * AirBandB
   * Yelp
   * everNoteなど
-
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/mTpmtvkl2y3cgu" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/kitasuke/search-apis-universal-links" title="Search APIs &amp; Universal Links" target="_blank">Search APIs &amp; Universal Links</a> </strong> from <strong><a href="//www.slideshare.net/kitasuke" target="_blank">Yusuke Kita</a></strong> </div>
