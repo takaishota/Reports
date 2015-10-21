@@ -6,11 +6,14 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 ### Apple TVとは
 * Appleが開発/販売するセットトップボックス
 * 放送信号を受信して表示する端末
+
 #### Apple TVでできること
 * 番組や映画を購入して
 * Air PlayでMacやiPhoneの画面をテレビで写す
+
 #### Top Shelf
 * 画面上部のコンテンツが表示されている領域部分
+
 #### 旧OSとの違い
 * リモコン
   * Touch サーフェス上で操作
@@ -24,6 +27,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 * TVML
   * アップr独自のマークアップ言語
 * JavaScript
+
 #### Frameworks
 * TVMLJS
   * JSのコンポーネエント
@@ -70,7 +74,8 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
 * canBecomeEnabledがNO
 * HiddenがYES
 * alphaがNO  
-など
+など  
+
 #### デバッグ
 * クイックルックでデバッグできる
 * 直前のfocused viewは赤
@@ -112,6 +117,7 @@ http://dev.classmethod.jp/news/ios9-bootcamp-4th/
   * タップしたらアプリ側のAppDelegateで拾える
   * publicに出るのは複数のユーザが見るパブリックのコンテンツは出て来やすくなる
   * プライバシーに関わるものはPrivateにそれ以外はPublicに
+
 #### CoreSpotlight
   * Privateのコンテンツ専用
   * インデックスしたアイテムの更新、削除もできる
