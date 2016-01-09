@@ -166,7 +166,7 @@
 
 ## 出てきた用語について調べた
 
-* OBD：車両情報のこのことらしいです
+* OBD：車両情報のこのことらしいです  
 　http://qiita.com/naohikowatanabe/items/39f14aacb06d04253d17  
 
 * CAN：車載制御機器間のネットワークのプロトコルのようです  
@@ -176,4 +176,4 @@
 　http://dev.classmethod.jp/cloud/aws/what-is-kinesis/
 
 * 電波法  
- http://news.mynavi.jp/series/wireless_embedded/004/
+　http://news.mynavi.jp/series/wireless_embedded/004/
